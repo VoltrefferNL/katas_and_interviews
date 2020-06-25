@@ -1,0 +1,24 @@
+{
+  "name": "katas_and_interviews",
+  "version": "1.0.0",
+  "description": "A collection of Katas and tests",
+  "main": "awardBudgetCuts.js",
+  "dependencies": {},
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^8.0.1"
+  },
+  "scripts": {
+    "test": "mocha spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VoltrefferNL/katas_and_interviews.git"
+  },
+  "author": "Niels de Visser",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VoltrefferNL/katas_and_interviews/issues"
+  },
+  "homepage": "https://github.com/VoltrefferNL/katas_and_interviews#readme"
+}
