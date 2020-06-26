@@ -28,34 +28,36 @@
 
 // INITIAL SOLUTION:
 
-// function calcDroneMinEnergy(route) {
-//     // energy = 0
-//   let newArr = []
-//   let negativeArr = []
-//   let counter = 0
+function calcDroneMinEnergy(route) {
+    // energy = 0
+  let newArr = []
+  let negativeArr = []
+  let counter = 0
   
-//   route.forEach((arr) => {
-//     newArr.push(arr[arr.length-1])
-//   })
+  route.forEach((arr) => {
+    newArr.push(arr[arr.length-1])
+  })
                 
-//   for (i = 1; i < newArr.length; i++){
-//     if (newArr[i] < newArr[i-1]){
-//       counter += (newArr[i-1]-newArr[i])
-//     } else {
-//       counter -= (newArr[i] - newArr[i-1])
-//     }
-//     if (counter < 0){
-//       negativeArr.push(counter)
-//     }    
-//   }             
-//   if (negativeArr.length < 1) return 0 
-//     negativeArr.sort((a,b) => (a-b))
+  for (i = 1; i < newArr.length; i++){
+    if (newArr[i] < newArr[i-1]){
+      counter += (newArr[i-1]-newArr[i])
+    } else {
+      counter -= (newArr[i] - newArr[i-1])
+    }
+    if (counter < 0){
+      negativeArr.push(counter)
+    }    
+  }             
+  if (negativeArr.length < 1) return 0 
+    negativeArr.sort((a,b) => (a-b))
   
-//   return negativeArr[0]-(2*negativeArr[0]) //Use Array values to determine Asc, or Desc
+  return negativeArr[0]-(2*negativeArr[0]) //Use Array values to determine Asc, or Desc
     
     
-//     // Energy
-//   }
+    // Energy
+  }
+
+//REFACTORED
 
 function calcDroneMinEnergy(route){
     newArr = []
